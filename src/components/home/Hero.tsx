@@ -11,30 +11,38 @@ const Hero = () => {
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-tianbot-blue/5 to-tianbot-green/5"></div>
       
-      <div 
-        className="relative w-40 h-40 md:w-48 md:h-48 mb-8 rounded-full bg-gradient-to-br from-tianbot-blue to-tianbot-green p-1"
-      >
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-tianbot-blue to-tianbot-green blur-xl opacity-30"></div>
-        <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-          <span className="text-7xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-tianbot-blue to-tianbot-green">𝘁</span>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            Tianbot
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            Mejorando la comunicación e integración social de personas con autismo mediante tecnología innovadora y herramientas interactivas.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+            <a href="#about" className="btn-primary">
+              Descubre Tianbot
+            </a>
+            <a href="#contact" className="btn-outline">
+              Contáctanos
+            </a>
+          </div>
         </div>
-      </div>
-      
-      <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-        Tianbot
-      </h1>
-      
-      <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
-        Mejorando la comunicación e integración social de personas con autismo mediante tecnología innovadora y herramientas interactivas.
-      </p>
-      
-      <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.7s' }}>
-        <a href="#about" className="btn-primary">
-          Descubre Tianbot
-        </a>
-        <a href="#contact" className="btn-outline">
-          Contáctanos
-        </a>
+        
+        <div className="md:w-1/2 flex justify-center mt-8 md:mt-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-tianbot-blue/20 to-tianbot-green/20 rounded-full blur-xl"></div>
+            <div className="relative w-64 h-80 md:w-80 md:h-96">
+              <img 
+                src="/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png" 
+                alt="TianBot dispositivo de comunicación asistiva" 
+                className="w-full h-full object-contain drop-shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
       </div>
       
       <a 
