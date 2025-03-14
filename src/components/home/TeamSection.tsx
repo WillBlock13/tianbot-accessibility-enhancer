@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Linkedin, Twitter, Mail, Briefcase, Book, User } from 'lucide-react';
 import { 
@@ -16,7 +17,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 3 – La Triunfadora',
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3',
+      image: '/lovable-uploads/6492b821-a50a-480b-ad9b-ac0c94ad2cc9.png',
       social: {
         linkedin: '#',
         twitter: '#',
