@@ -36,7 +36,7 @@ const Hero = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-tianbot-blue/20 to-tianbot-green/20 rounded-full blur-xl"></div>
             <div className="relative w-64 h-80 md:w-80 md:h-96">
               <img 
-                src="/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png" 
+                src="/lovable-uploads/a5c60bb0-c8cd-4de4-86d6-f718e3f81188.png" 
                 alt="TianBot dispositivo de comunicación asistiva" 
                 className="w-full h-full object-contain drop-shadow-xl"
               />
