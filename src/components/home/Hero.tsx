@@ -33,8 +33,8 @@ const Hero = () => {
         
         <div className="md:w-1/2 flex justify-center mt-8 md:mt-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-tianbot-blue/20 to-tianbot-green/20 rounded-full blur-xl"></div>
-            <div className="relative w-64 h-80 md:w-80 md:h-96">
+            <div className="absolute -inset-6 bg-gradient-to-r from-tianbot-blue/20 to-tianbot-green/20 rounded-full blur-xl"></div>
+            <div className="relative w-72 h-96 md:w-96 md:h-[500px] lg:w-[450px] lg:h-[550px]">
               <img 
                 src="/lovable-uploads/a5c60bb0-c8cd-4de4-86d6-f718e3f81188.png" 
                 alt="TianBot dispositivo de comunicación asistiva" 
