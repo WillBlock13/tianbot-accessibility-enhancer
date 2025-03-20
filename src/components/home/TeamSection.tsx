@@ -86,6 +86,11 @@ const TeamSection = () => {
                       src={member.image} 
                       alt={member.name} 
                       className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null;
+                        target.src = '/placeholder.svg';
+                      }}
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent z-20">
                       <h3 className="text-lg font-bold mb-1">{member.name}</h3>
