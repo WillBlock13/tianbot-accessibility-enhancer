@@ -59,7 +59,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 7 – El Entusiasta',
       studies: '1º Ingeniería de Diseño Industrial',
       bio: 'Guillem es el Product Development Engineer (PDE), encargado de la fabricación digital y la parte electrónica del TianBot. Su rol incluye el diseño y producción de la estructura mediante impresión 3D y otras técnicas de fabricación, además de la integración de componentes electrónicos.',
-      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
+      image: '/lovable-uploads/5126d289-8406-46ec-854b-c41ba3f46236.png',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
