@@ -31,7 +31,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 2 – La Ayudadora',
       studies: '2º Bachillerato Científico',
       bio: 'Maria es la Chief Marketing Officer (CMO) de TianBot, encargada de liderar la estrategia de marketing y ventas. Su rol incluye la planificación de campañas, la gestión de la comunicación y la identificación de oportunidades comerciales, buscando conectar con potenciales clientes.',
-      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3',
+      image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
@@ -45,7 +45,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 5 – La Observadora',
       studies: '4º ESO',
       bio: 'Claudia es la User Experience and Validation Coordinator (UXVC) de TianBot. Su rol implica analizar la experiencia del usuario y validar soluciones para optimizar su funcionamiento. Es una persona organizada, creativa y comprometida con el aprendizaje continuo.',
-      image: 'https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
