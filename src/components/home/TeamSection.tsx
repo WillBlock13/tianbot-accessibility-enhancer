@@ -18,6 +18,7 @@ const TeamSection = () => {
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
       image: '/lovable-uploads/6492b821-a50a-480b-ad9b-ac0c94ad2cc9.png',
+      fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -31,6 +32,7 @@ const TeamSection = () => {
       studies: '2º Bachillerato Científico',
       bio: 'Maria es la Chief Marketing Officer (CMO) de TianBot, encargada de liderar la estrategia de marketing y ventas. Su rol incluye la planificación de campañas, la gestión de la comunicación y la identificación de oportunidades comerciales, buscando conectar con potenciales clientes.',
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3',
+      fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -44,6 +46,7 @@ const TeamSection = () => {
       studies: '4º ESO',
       bio: 'Claudia es la User Experience and Validation Coordinator (UXVC) de TianBot. Su rol implica analizar la experiencia del usuario y validar soluciones para optimizar su funcionamiento. Es una persona organizada, creativa y comprometida con el aprendizaje continuo.',
       image: 'https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3',
+      fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -57,6 +60,7 @@ const TeamSection = () => {
       studies: '1º Ingeniería de Diseño Industrial',
       bio: 'Guillem es el Product Development Engineer (PDE), encargado de la fabricación digital y la parte electrónica del TianBot. Su rol incluye el diseño y producción de la estructura mediante impresión 3D y otras técnicas de fabricación, además de la integración de componentes electrónicos.',
       image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
+      fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -89,7 +93,8 @@ const TeamSection = () => {
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.onerror = null;
-                        target.src = '/placeholder.svg';
+                        target.src = member.fallbackImage || '/placeholder.svg';
+                        console.log(`Image for ${member.name} failed to load, using fallback`);
                       }}
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent z-20">
