@@ -8,14 +8,14 @@ const NewsSection = () => {
       title: 'Tianbot finalista en el Audi Creativity Challenge',
       date: '15 de junio de 2024',
       excerpt: 'Nuestro proyecto ha sido reconocido como uno de los finalistas en el prestigioso concurso de innovación Audi Creativity Challenge, destacando por su impacto social.',
-      image: 'public/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
+      image: 'ublic/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
       url: '#news-1'
     },
     {
       title: 'Participación en el programa de incubación AudiStart'
       date: '28 de abril de 2025',
       excerpt: 'Presentamos la versión 2.0 de nuestra aplicación, con mejoras significativas en la interfaz de usuario y nuevas funcionalidades adaptativas.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3',
       url: '#news-2'
     },
     {
