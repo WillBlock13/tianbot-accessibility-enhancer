@@ -28,7 +28,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 3 – La Triunfadora',
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
-      image: 'public/lovable-uploads/fab-lab-te-amposta-directora-lala-escriva-pons-2024.jpg',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
       fallbackImage: 'public/lovable-uploads/fab-lab-te-amposta-directora-lala-escriva-pons-2024.jpg',
       social: {
         linkedin: '#',
@@ -47,7 +47,7 @@ const TeamSection = () => {
       social: {
         linkedin: '#',
         twitter: '#',
-        email: 'maria@tianbot.com'
+        email: 'maria.dolss@tianbot.com'
       }
     },
     {
@@ -56,7 +56,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 5 – La Observadora',
       studies: '4º ESO',
       bio: 'Claudia es la User Experience and Validation Coordinator (UXVC) de TianBot. Su rol implica analizar la experiencia del usuario y validar soluciones para optimizar su funcionamiento. Es una persona organizada, creativa y comprometida con el aprendizaje continuo.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
@@ -70,12 +70,12 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 7 – El Entusiasta',
       studies: '1º Ingeniería de Diseño Industrial',
       bio: 'Guillem es el Product Development Engineer (PDE), encargado de la fabricación digital y la parte electrónica del TianBot. Su rol incluye el diseño y producción de la estructura mediante impresión 3D y otras técnicas de fabricación, además de la integración de componentes electrónicos.',
-      image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
         twitter: '#',
-        email: 'guillem@tianbot.com'
+        email: 'guillemformacio@tianbot.com'
       }
     }
   ];
