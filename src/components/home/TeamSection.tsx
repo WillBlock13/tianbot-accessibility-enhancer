@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Linkedin, Twitter, Mail, Briefcase, Book, User } from 'lucide-react';
 import { 
@@ -22,7 +21,7 @@ const TeamSection = () => {
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
       image: '/lovable-uploads/68b7478c-303d-4f88-9f29-bc3a2f6c58ec.png',
-      fallbackImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+      fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
         twitter: '#',
