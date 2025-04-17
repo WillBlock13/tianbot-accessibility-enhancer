@@ -28,7 +28,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 3 – La Triunfadora',
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
-      image: '/lovable-uploads/68b7478c-303d-4f88-9f29-bc3a2f6c58ec.png',
+      image: '/lovable-uploads/83803367-9631-408a-8021-eb2c9c9b5f75.png',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
@@ -174,9 +174,10 @@ const TeamMemberCard = ({
               <img 
                 src={member.image} 
                 alt={member.name} 
-                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110"
                 onLoad={() => onImageLoad(member.name)}
                 onError={(e) => {
+                  console.log(`Error loading image for ${member.name}, using fallback`);
                   e.currentTarget.src = member.fallbackImage;
                   onImageLoad(member.name);
                 }}
