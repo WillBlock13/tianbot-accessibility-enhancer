@@ -33,7 +33,7 @@ const TeamSection = () => {
       social: {
         linkedin: '#',
         twitter: '#',
-        email: 'lala@tianbot.com'
+        email: 'iescriva@gmail.com'
       }
     },
     {
