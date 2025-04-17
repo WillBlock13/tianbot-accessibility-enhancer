@@ -15,7 +15,7 @@ const NewsSection = () => {
       title: 'Participación en el programa de incubación AudiStart'
       date: '28 de abril de 2025',
       excerpt: 'Presentamos la versión 2.0 de nuestra aplicación, con mejoras significativas en la interfaz de usuario y nuevas funcionalidades adaptativas.',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
       url: '#news-2'
     },
     {
