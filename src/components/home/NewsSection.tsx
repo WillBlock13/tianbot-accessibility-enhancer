@@ -8,7 +8,7 @@ const NewsSection = () => {
       title: 'Tianbot finalista en el Audi Creativity Challenge',
       date: '15 de junio de 2024',
       excerpt: 'Nuestro proyecto ha sido reconocido como uno de los finalistas en el prestigioso concurso de innovación Audi Creativity Challenge, destacando por su impacto social.',
-      image: 'public/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg'
+      image: 'ublic/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
       url: '#news-1'
     },
     {
