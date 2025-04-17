@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Linkedin, Twitter, Mail, Briefcase, Book, User } from 'lucide-react';
 import { 
@@ -8,6 +9,13 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel';
 
 const TeamSection = () => {
   // Track loading state for images
@@ -72,14 +80,10 @@ const TeamSection = () => {
     }
   ];
 
+  // Simplified image loading handler
   const handleImageLoad = (name: string) => {
     setImagesLoaded(prev => ({ ...prev, [name]: true }));
     console.log(`Image for ${name} loaded successfully`);
-  };
-
-  const handleImageError = (name: string, fallback: string) => {
-    console.log(`Image for ${name} failed to load, using fallback`);
-    return fallback;
   };
 
   return (
@@ -92,90 +96,43 @@ const TeamSection = () => {
           Un grupo joven y multidisciplinario comprometido con la innovación y la accesibilidad
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-16">
+        {/* Desktop View - Cards Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-16">
           {teamMembers.map((member, index) => (
-            <HoverCard key={index}>
-              <HoverCardTrigger asChild>
-                <Card className="relative group overflow-hidden hover-lift cursor-pointer border border-border hover:border-primary/20 transition-all duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
-                  <div className="aspect-[3/4] overflow-hidden relative">
-                    {!imagesLoaded[member.name] && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
-                        <Skeleton className="w-full h-full" />
-                      </div>
-                    )}
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className={`w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 ${imagesLoaded[member.name] ? 'opacity-100' : 'opacity-0'}`}
-                      onLoad={() => handleImageLoad(member.name)}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.onerror = null;
-                        target.src = member.fallbackImage;
-                        handleImageLoad(member.name);
-                      }}
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent z-20">
-                      <h3 className="text-lg font-bold mb-1">{member.name}</h3>
-                      <p className="text-primary font-medium flex items-center gap-1">
-                        <Briefcase size={14} />
-                        {member.role}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-80 p-0 shadow-xl border border-border bg-card">
-                <div className="p-4">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Avatar className="h-10 w-10 border-2 border-primary">
-                      <AvatarImage src={member.image} alt={member.name} />
-                      <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h4 className="text-base font-bold leading-tight">{member.name}</h4>
-                      <p className="text-primary text-sm">{member.role}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2 text-sm">
-                    <p className="flex items-center gap-2">
-                      <User size={14} className="text-muted-foreground" />
-                      <span className="text-muted-foreground">{member.enneagram}</span>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Book size={14} className="text-muted-foreground" />
-                      <span className="text-muted-foreground">{member.studies}</span>
-                    </p>
-                    <p className="pt-2 text-card-foreground">{member.bio}</p>
-                  </div>
-                </div>
-                <div className="border-t border-border bg-muted/30 p-3 flex justify-end space-x-3">
-                  <a 
-                    href={member.social.linkedin} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label={`LinkedIn de ${member.name}`}
-                  >
-                    <Linkedin size={16} />
-                  </a>
-                  <a 
-                    href={member.social.twitter} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label={`Twitter de ${member.name}`}
-                  >
-                    <Twitter size={16} />
-                  </a>
-                  <a 
-                    href={`mailto:${member.social.email}`} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label={`Email de ${member.name}`}
-                  >
-                    <Mail size={16} />
-                  </a>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
+            <TeamMemberCard 
+              key={index} 
+              member={member} 
+              onImageLoad={handleImageLoad}
+              isLoaded={!!imagesLoaded[member.name]}
+            />
           ))}
+        </div>
+
+        {/* Mobile View - Carousel */}
+        <div className="md:hidden mt-16">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {teamMembers.map((member, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <TeamMemberCard 
+                    member={member} 
+                    onImageLoad={handleImageLoad} 
+                    isLoaded={!!imagesLoaded[member.name]}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-2 mt-4">
+              <CarouselPrevious className="static transform-none mx-1" />
+              <CarouselNext className="static transform-none mx-1" />
+            </div>
+          </Carousel>
         </div>
 
         <div className="mt-16 text-center">
@@ -189,6 +146,101 @@ const TeamSection = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+// Separated TeamMemberCard component for better readability and maintenance
+const TeamMemberCard = ({ 
+  member, 
+  onImageLoad,
+  isLoaded 
+}: { 
+  member: any, 
+  onImageLoad: (name: string) => void,
+  isLoaded: boolean 
+}) => {
+  return (
+    <HoverCard>
+      <HoverCardTrigger asChild>
+        <Card className="relative group overflow-hidden hover-lift cursor-pointer border border-border hover:border-primary/20 transition-all duration-300">
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+          <div className="aspect-square overflow-hidden relative">
+            {!isLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
+                <Skeleton className="w-full h-full" />
+              </div>
+            )}
+            <div className={`w-full h-full ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                onLoad={() => onImageLoad(member.name)}
+                onError={(e) => {
+                  e.currentTarget.src = member.fallbackImage;
+                  onImageLoad(member.name);
+                }}
+              />
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent z-20">
+              <h3 className="text-lg font-bold mb-1">{member.name}</h3>
+              <p className="text-primary font-medium flex items-center gap-1">
+                <Briefcase size={14} />
+                {member.role}
+              </p>
+            </div>
+          </div>
+        </Card>
+      </HoverCardTrigger>
+      <HoverCardContent className="w-80 p-0 shadow-xl border border-border bg-card">
+        <div className="p-4">
+          <div className="flex items-center gap-3 mb-3">
+            <Avatar className="h-10 w-10 border-2 border-primary">
+              <AvatarImage src={member.image} alt={member.name} />
+              <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+            </Avatar>
+            <div>
+              <h4 className="text-base font-bold leading-tight">{member.name}</h4>
+              <p className="text-primary text-sm">{member.role}</p>
+            </div>
+          </div>
+          <div className="space-y-2 text-sm">
+            <p className="flex items-center gap-2">
+              <User size={14} className="text-muted-foreground" />
+              <span className="text-muted-foreground">{member.enneagram}</span>
+            </p>
+            <p className="flex items-center gap-2">
+              <Book size={14} className="text-muted-foreground" />
+              <span className="text-muted-foreground">{member.studies}</span>
+            </p>
+            <p className="pt-2 text-card-foreground">{member.bio}</p>
+          </div>
+        </div>
+        <div className="border-t border-border bg-muted/30 p-3 flex justify-end space-x-3">
+          <a 
+            href={member.social.linkedin} 
+            className="text-muted-foreground hover:text-primary transition-colors"
+            aria-label={`LinkedIn de ${member.name}`}
+          >
+            <Linkedin size={16} />
+          </a>
+          <a 
+            href={member.social.twitter} 
+            className="text-muted-foreground hover:text-primary transition-colors"
+            aria-label={`Twitter de ${member.name}`}
+          >
+            <Twitter size={16} />
+          </a>
+          <a 
+            href={`mailto:${member.social.email}`} 
+            className="text-muted-foreground hover:text-primary transition-colors"
+            aria-label={`Email de ${member.name}`}
+          >
+            <Mail size={16} />
+          </a>
+        </div>
+      </HoverCardContent>
+    </HoverCard>
   );
 };
 
