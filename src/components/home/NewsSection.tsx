@@ -12,7 +12,7 @@ const NewsSection = () => {
       url: '#news-1'
     },
     {
-      title: 'Participación en el programa de incubación AudiStart'
+      title: 'Participación en el programa de incubación AudiStart',
       date: '28 de abril de 2025',
       excerpt: 'Presentamos la versión 2.0 de nuestra aplicación, con mejoras significativas en la interfaz de usuario y nuevas funcionalidades adaptativas.',
       image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
@@ -29,20 +29,20 @@ const NewsSection = () => {
 
   const upcomingEvents = [
     {
-      title: 'Webinar: Tecnología y Autismo',
-      date: '15 de julio de 2023',
+      title: 'Tecnología y Autismo',
+      date: '15 de julio de 2025',
       location: 'Online',
       url: '#event-1'
     },
     {
-      title: 'Taller: Introducción a Tianbot',
-      date: '22 de julio de 2023',
+      title: 'Radio Amposta',
+      date: '22 de julio de 2025',
       location: 'Barcelona, España',
       url: '#event-2'
     },
     {
-      title: 'Conferencia Internacional de Tecnologías Adaptativas',
-      date: '5-7 de agosto de 2023',
+      title: 'DEMO Day ; AudiStart',
+      date: 'setiembre de 2025',
       location: 'Madrid, España',
       url: '#event-3'
     }
