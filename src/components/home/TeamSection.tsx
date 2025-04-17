@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Linkedin, Twitter, Mail, Briefcase, Book, User } from 'lucide-react';
 import { 
   HoverCard,
@@ -8,8 +8,12 @@ import {
 } from '@/components/ui/hover-card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const TeamSection = () => {
+  // Track loading state for images
+  const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>({});
+
   const teamMembers = [
     {
       name: 'Lala Escrivà',
@@ -17,8 +21,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 3 – La Triunfadora',
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
-      image: '/lovable-uploads/ae6996ed-340b-4d2e-a2c7-e78c56e40083.png',
-      fallbackImage: '/placeholder.svg',
+      image: '/lovable-uploads/68b7478c-303d-4f88-9f29-bc3a2f6c58ec.png',
+      fallbackImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -31,7 +35,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 2 – La Ayudadora',
       studies: '2º Bachillerato Científico',
       bio: 'Maria es la Chief Marketing Officer (CMO) de TianBot, encargada de liderar la estrategia de marketing y ventas. Su rol incluye la planificación de campañas, la gestión de la comunicación y la identificación de oportunidades comerciales, buscando conectar con potenciales clientes.',
-      image: '/lovable-uploads/5126d289-8406-46ec-854b-c41ba3f46236.png',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
@@ -45,7 +49,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 5 – La Observadora',
       studies: '4º ESO',
       bio: 'Claudia es la User Experience and Validation Coordinator (UXVC) de TianBot. Su rol implica analizar la experiencia del usuario y validar soluciones para optimizar su funcionamiento. Es una persona organizada, creativa y comprometida con el aprendizaje continuo.',
-      image: '/lovable-uploads/5126d289-8406-46ec-854b-c41ba3f46236.png',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
@@ -59,7 +63,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 7 – El Entusiasta',
       studies: '1º Ingeniería de Diseño Industrial',
       bio: 'Guillem es el Product Development Engineer (PDE), encargado de la fabricación digital y la parte electrónica del TianBot. Su rol incluye el diseño y producción de la estructura mediante impresión 3D y otras técnicas de fabricación, además de la integración de componentes electrónicos.',
-      image: '/lovable-uploads/5126d289-8406-46ec-854b-c41ba3f46236.png',
+      image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
@@ -68,6 +72,16 @@ const TeamSection = () => {
       }
     }
   ];
+
+  const handleImageLoad = (name: string) => {
+    setImagesLoaded(prev => ({ ...prev, [name]: true }));
+    console.log(`Image for ${name} loaded successfully`);
+  };
+
+  const handleImageError = (name: string, fallback: string) => {
+    console.log(`Image for ${name} failed to load, using fallback`);
+    return fallback;
+  };
 
   return (
     <section id="team" className="container-section bg-muted/30">
@@ -86,15 +100,21 @@ const TeamSection = () => {
                 <Card className="relative group overflow-hidden hover-lift cursor-pointer border border-border hover:border-primary/20 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
                   <div className="aspect-[3/4] overflow-hidden relative">
+                    {!imagesLoaded[member.name] && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
+                        <Skeleton className="w-full h-full" />
+                      </div>
+                    )}
                     <img 
                       src={member.image} 
                       alt={member.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                      className={`w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 ${imagesLoaded[member.name] ? 'opacity-100' : 'opacity-0'}`}
+                      onLoad={() => handleImageLoad(member.name)}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.onerror = null;
-                        target.src = member.fallbackImage || '/placeholder.svg';
-                        console.log(`Image for ${member.name} failed to load, using fallback`);
+                        target.src = member.fallbackImage;
+                        handleImageLoad(member.name);
                       }}
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent z-20">
