@@ -28,8 +28,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 3 – La Triunfadora',
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
-      fallbackImage: 'public/lovable-uploads/fab-lab-te-amposta-directora-lala-escriva-pons-2024.jpg',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/lala.jpg',
+      fallbackImage: 'public/lovable-uploads/lala.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -42,8 +42,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 2 – La Ayudadora',
       studies: '2º Bachillerato Científico',
       bio: 'Maria es la Chief Marketing Officer (CMO) de TianBot, encargada de liderar la estrategia de marketing y ventas. Su rol incluye la planificación de campañas, la gestión de la comunicación y la identificación de oportunidades comerciales, buscando conectar con potenciales clientes.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
-      fallbackImage: 'public/lovable-uploads/Imatge de WhatsApp 2025-02-23 a les 19.35.56_47122902.jpg',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/maria.jpg',
+      fallbackImage: 'public/lovable-uploads/maria.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -56,8 +56,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 5 – La Observadora',
       studies: '4º ESO',
       bio: 'Claudia es la User Experience and Validation Coordinator (UXVC) de TianBot. Su rol implica analizar la experiencia del usuario y validar soluciones para optimizar su funcionamiento. Es una persona organizada, creativa y comprometida con el aprendizaje continuo.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
-      fallbackImage: 'public/lovable-uploads/Captura de pantalla 2025-04-17 150644.png',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/claudia.png',
+      fallbackImage: 'public/lovable-uploads/claudia.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -70,8 +70,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 7 – El Entusiasta',
       studies: '1º Ingeniería de Diseño Industrial',
       bio: 'Guillem es el Product Development Engineer (PDE), encargado de la fabricación digital y la parte electrónica del TianBot. Su rol incluye el diseño y producción de la estructura mediante impresión 3D y otras técnicas de fabricación, además de la integración de componentes electrónicos.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
-      fallbackImage: 'public/lovable-uploads/IMG_20250305_181113.jpg',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/guillem.jpg',
+      fallbackImage: 'public/lovable-uploads/guillem.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
