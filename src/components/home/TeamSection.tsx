@@ -29,7 +29,7 @@ const TeamSection = () => {
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
       image: '<img src="/lovable-uploads/imatges.jpg" alt="Foto de Lala" />',
-      fallbackImage: '/placeholder.svg',
+      fallbackImage: 'https://ibb.co/rGpFs6kp',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -43,7 +43,7 @@ const TeamSection = () => {
       studies: '2º Bachillerato Científico',
       bio: 'Maria es la Chief Marketing Officer (CMO) de TianBot, encargada de liderar la estrategia de marketing y ventas. Su rol incluye la planificación de campañas, la gestión de la comunicación y la identificación de oportunidades comerciales, buscando conectar con potenciales clientes.',
       image: 'https://ibb.co/rGpFs6kp',
-      fallbackImage: '/placeholder.svg',
+      fallbackImage: 'https://ibb.co/rGpFs6kp',
       social: {
         linkedin: '#',
         twitter: '#',
