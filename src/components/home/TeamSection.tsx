@@ -42,7 +42,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 2 – La Ayudadora',
       studies: '2º Bachillerato Científico',
       bio: 'Maria es la Chief Marketing Officer (CMO) de TianBot, encargada de liderar la estrategia de marketing y ventas. Su rol incluye la planificación de campañas, la gestión de la comunicación y la identificación de oportunidades comerciales, buscando conectar con potenciales clientes.',
-      image: 'https://via.placeholder.com/150',
+      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
       fallbackImage: 'https://via.placeholder.com/150',
       social: {
         linkedin: '#',
