@@ -17,7 +17,7 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 3 – La Triunfadora',
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
-      image: '/lovable-uploads/6492b821-a50a-480b-ad9b-ac0c94ad2cc9.png',
+      image: '/lovable-uploads/ae6996ed-340b-4d2e-a2c7-e78c56e40083.png',
       fallbackImage: '/placeholder.svg',
       social: {
         linkedin: '#',
