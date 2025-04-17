@@ -57,7 +57,7 @@ const TeamSection = () => {
       studies: '4º ESO',
       bio: 'Claudia es la User Experience and Validation Coordinator (UXVC) de TianBot. Su rol implica analizar la experiencia del usuario y validar soluciones para optimizar su funcionamiento. Es una persona organizada, creativa y comprometida con el aprendizaje continuo.',
       image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
-      fallbackImage: '/placeholder.svg',
+      fallbackImage: 'public/lovable-uploads/Captura de pantalla 2025-04-17 150644.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -71,7 +71,7 @@ const TeamSection = () => {
       studies: '1º Ingeniería de Diseño Industrial',
       bio: 'Guillem es el Product Development Engineer (PDE), encargado de la fabricación digital y la parte electrónica del TianBot. Su rol incluye el diseño y producción de la estructura mediante impresión 3D y otras técnicas de fabricación, además de la integración de componentes electrónicos.',
       image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
-      fallbackImage: '/placeholder.svg',
+      fallbackImage: 'public/lovable-uploads/IMG_20250305_181113.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
