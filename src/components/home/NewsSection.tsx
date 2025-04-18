@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 
@@ -15,7 +14,7 @@ const NewsSection = () => {
       title: 'Participación en el programa de incubación AudiStart',
       date: '28 de abril de 2025',
       excerpt: 'Presentamos la versión 2.0 de nuestra aplicación, con mejoras significativas en la interfaz de usuario y nuevas funcionalidades adaptativas.',
-      image: 'https://images.unsplash.com/photo-1518894781260-1dd5925ef85b?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max', // Reduced image size
+      image: 'public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
       url: '#news-2'
     },
     {
