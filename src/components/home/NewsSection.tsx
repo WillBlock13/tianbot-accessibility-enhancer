@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 
@@ -14,7 +15,7 @@ const NewsSection = () => {
       title: 'Participación en el programa de incubación AudiStart',
       date: '28 de abril de 2025',
       excerpt: 'Presentamos la versión 2.0 de nuestra aplicación, con mejoras significativas en la interfaz de usuario y nuevas funcionalidades adaptativas.',
-      image: 'https://images.unsplash.com/photo-1518894781260-1dd5925ef85b?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max',
+      image: 'https://images.unsplash.com/photo-1518894781260-1dd5925ef85b?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max', // Reduced image size
       url: '#news-2'
     },
     {
@@ -67,6 +68,9 @@ const NewsSection = () => {
                 <img 
                   src={item.image} 
                   alt={item.title} 
+                  loading="lazy"  // Added lazy loading
+                  width={400}     // Added width
+                  height={300}    // Added height
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>

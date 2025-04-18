@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Linkedin, Twitter, Mail, Briefcase, Book, User } from 'lucide-react';
 import { 
@@ -163,33 +162,29 @@ const TeamMemberCard = ({
     <HoverCard>
       <HoverCardTrigger asChild>
         <Card className="relative group overflow-hidden hover-lift cursor-pointer border border-border hover:border-primary/20 transition-all duration-300">
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
           <div className="aspect-square overflow-hidden relative">
-            {!isLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
-                <Skeleton className="w-full h-full" />
-              </div>
-            )}
-            <div className={`w-full h-full ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
-              <img 
-                src={member.image} 
-                alt={member.name} 
-                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110"
-                onLoad={() => onImageLoad(member.name)}
-                onError={(e) => {
-                  console.log(`Error loading image for ${member.name}, using fallback`);
-                  e.currentTarget.src = member.fallbackImage;
-                  onImageLoad(member.name);
-                }}
-              />
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent z-20">
-              <h3 className="text-lg font-bold mb-1">{member.name}</h3>
-              <p className="text-primary font-medium flex items-center gap-1">
-                <Briefcase size={14} />
-                {member.role}
-              </p>
-            </div>
+            <img 
+              src={member.image} 
+              alt={member.name} 
+              loading="lazy" 
+              width={300}
+              height={300}
+              className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110"
+              onLoad={() => onImageLoad(member.name)}
+              onError={(e) => {
+                console.log(`Error loading image for ${member.name}, using fallback`);
+                e.currentTarget.src = member.fallbackImage;
+                onImageLoad(member.name);
+              }}
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent z-20">
+            <h3 className="text-lg font-bold mb-1">{member.name}</h3>
+            <p className="text-primary font-medium flex items-center gap-1">
+              <Briefcase size={14} />
+              {member.role}
+            </p>
           </div>
         </Card>
       </HoverCardTrigger>
