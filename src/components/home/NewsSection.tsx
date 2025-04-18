@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 
@@ -7,14 +8,14 @@ const NewsSection = () => {
       title: 'Tianbot finalista en el Audi Creativity Challenge',
       date: '15 de junio de 2024',
       excerpt: 'Nuestro proyecto ha sido reconocido como uno de los finalistas en el prestigioso concurso de innovación Audi Creativity Challenge, destacando por su impacto social.',
-      image: 'public/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
+      image: '/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
       url: '#news-1'
     },
     {
       title: 'Participación en el programa de incubación AudiStart',
       date: '28 de abril de 2025',
       excerpt: 'Presentamos la versión 2.0 de nuestra aplicación, con mejoras significativas en la interfaz de usuario y nuevas funcionalidades adaptativas.',
-      image: 'public/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
+      image: '/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
       url: '#news-2'
     },
     {
@@ -67,9 +68,9 @@ const NewsSection = () => {
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  loading="lazy"  // Added lazy loading
-                  width={400}     // Added width
-                  height={300}    // Added height
+                  loading="lazy"
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
