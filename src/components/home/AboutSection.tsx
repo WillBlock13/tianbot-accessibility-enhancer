@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle, Heart, Brain, Users } from 'lucide-react';
 
@@ -61,23 +60,6 @@ const AboutSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 bg-accent/20 border border-border rounded-xl p-8">
-          <h3 className="text-2xl font-bold mb-4">Testimonio</h3>
-          <blockquote className="relative">
-            <span className="text-6xl text-primary/20 absolute top-0 left-0">"</span>
-            <p className="text-lg italic pl-8 pt-4">
-              Tianbot ha cambiado completamente nuestra forma de comunicarnos con Martín. 
-              Ahora puede expresar sus necesidades con mayor facilidad y ha mostrado avances 
-              significativos en sus interacciones sociales.
-            </p>
-            <footer className="mt-4 text-right">
-              <cite className="font-medium not-italic">
-                — Ana Rodríguez, madre de Martín (9 años)
-              </cite>
-            </footer>
-          </blockquote>
         </div>
       </div>
     </section>
