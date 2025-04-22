@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Linkedin, Twitter, Mail, Briefcase, Book, User } from 'lucide-react';
 import { 
@@ -27,8 +28,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 3 – La Triunfadora',
       studies: 'Agente de Innovación Social y Digital',
       bio: 'Lala es la CEO del proyecto TianBot, impulsando su visión y desarrollo dentro de Fablab TE. Con una mentalidad estratégica y orientada a resultados, se centra en transformar ideas en soluciones reales, conectando talento y recursos para hacer crecer el proyecto.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/lala.jpg',
-      fallbackImage: 'public/lovable-uploads/lala.jpg',
+      image: '/lovable-uploads/lala.jpg',
+      fallbackImage: '/lovable-uploads/lala.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -41,8 +42,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 2 – La Ayudadora',
       studies: '2º Bachillerato Científico',
       bio: 'Maria es la Chief Marketing Officer (CMO) de TianBot, encargada de liderar la estrategia de marketing y ventas. Su rol incluye la planificación de campañas, la gestión de la comunicación y la identificación de oportunidades comerciales, buscando conectar con potenciales clientes.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/maria.jpg',
-      fallbackImage: 'public/lovable-uploads/maria.jpg',
+      image: '/lovable-uploads/maria.jpg',
+      fallbackImage: '/lovable-uploads/maria.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -55,8 +56,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 5 – La Observadora',
       studies: '4º ESO',
       bio: 'Claudia es la User Experience and Validation Coordinator (UXVC) de TianBot. Su rol implica analizar la experiencia del usuario y validar soluciones para optimizar su funcionamiento. Es una persona organizada, creativa y comprometida con el aprendizaje continuo.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/claudia.png',
-      fallbackImage: 'public/lovable-uploads/claudia.png',
+      image: '/lovable-uploads/claudia.png',
+      fallbackImage: '/lovable-uploads/claudia.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -69,8 +70,8 @@ const TeamSection = () => {
       enneagram: 'Eneatipo 7 – El Entusiasta',
       studies: '1º Ingeniería de Diseño Industrial',
       bio: 'Guillem es el Product Development Engineer (PDE), encargado de la fabricación digital y la parte electrónica del TianBot. Su rol incluye el diseño y producción de la estructura mediante impresión 3D y otras técnicas de fabricación, además de la integración de componentes electrónicos.',
-      image: 'WillBlock13/tianbot-accessibility-enhancer/public/lovable-uploads/guillem.jpg',
-      fallbackImage: 'public/lovable-uploads/guillem.jpg',
+      image: '/lovable-uploads/guillem.jpg',
+      fallbackImage: '/lovable-uploads/guillem.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -79,10 +80,17 @@ const TeamSection = () => {
     }
   ];
 
-  // Simplified image loading handler
+  // Improved image loading handler with better error handling
   const handleImageLoad = (name: string) => {
     setImagesLoaded(prev => ({ ...prev, [name]: true }));
     console.log(`Image for ${name} loaded successfully`);
+  };
+
+  // Added error handling function
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>, name: string, fallbackPath: string) => {
+    console.log(`Error loading image for ${name}, using fallback`);
+    e.currentTarget.src = fallbackPath;
+    handleImageLoad(name);
   };
 
   return (
@@ -102,6 +110,7 @@ const TeamSection = () => {
               key={index} 
               member={member} 
               onImageLoad={handleImageLoad}
+              onImageError={handleImageError}
               isLoaded={!!imagesLoaded[member.name]}
             />
           ))}
@@ -121,7 +130,8 @@ const TeamSection = () => {
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <TeamMemberCard 
                     member={member} 
-                    onImageLoad={handleImageLoad} 
+                    onImageLoad={handleImageLoad}
+                    onImageError={handleImageError} 
                     isLoaded={!!imagesLoaded[member.name]}
                   />
                 </CarouselItem>
@@ -148,14 +158,16 @@ const TeamSection = () => {
   );
 };
 
-// Separated TeamMemberCard component for better readability and maintenance
+// Separated TeamMemberCard component with improved image handling
 const TeamMemberCard = ({ 
   member, 
   onImageLoad,
+  onImageError,
   isLoaded 
 }: { 
   member: any, 
   onImageLoad: (name: string) => void,
+  onImageError: (e: React.SyntheticEvent<HTMLImageElement, Event>, name: string, fallbackPath: string) => void,
   isLoaded: boolean 
 }) => {
   return (
@@ -163,19 +175,20 @@ const TeamMemberCard = ({
       <HoverCardTrigger asChild>
         <Card className="relative group overflow-hidden hover-lift cursor-pointer border border-border hover:border-primary/20 transition-all duration-300">
           <div className="aspect-square overflow-hidden relative">
+            {!isLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center bg-muted">
+                <Skeleton className="h-full w-full" />
+              </div>
+            )}
             <img 
               src={member.image} 
               alt={member.name} 
               loading="lazy" 
               width={300}
               height={300}
-              className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110"
+              className={`w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
               onLoad={() => onImageLoad(member.name)}
-              onError={(e) => {
-                console.log(`Error loading image for ${member.name}, using fallback`);
-                e.currentTarget.src = member.fallbackImage;
-                onImageLoad(member.name);
-              }}
+              onError={(e) => onImageError(e, member.name, member.fallbackImage)}
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
