@@ -20,9 +20,9 @@ const NewsSection = () => {
     },
     {
       title: 'Colaboración con el Centro de Investigación en Autismo',
-      date: '12 de marzo de 2023',
+      date: '12 de marzo de 2025',
       excerpt: 'Iniciamos una colaboración estratégica con el Centro de Investigación en Autismo para evaluar y mejorar continuamente nuestras herramientas.',
-      image: 'public/lovable-uploads/IMG_1834.JPG',
+      image: '/lovable-uploads/IMG_1834.JPG',
       url: '#news-3'
     }
   ];
