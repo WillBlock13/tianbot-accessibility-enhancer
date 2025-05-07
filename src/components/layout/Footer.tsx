@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4 flex items-center">
               <span className="text-3xl text-primary mr-1"></span> 
-              Tianbot
+              TianBot
             </h3>
             <p className="text-muted-foreground mb-4">
               Mejorando la comunicación e integración social de personas con autismo 
@@ -39,7 +40,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                  ¿Qué es Tianbot?
+                  ¿Qué es TianBot?
                 </a>
               </li>
               <li>
@@ -71,14 +72,14 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail size={20} className="mr-2 mt-1 flex-shrink-0" />
-                <a href="mailto:info@tianbot.com" className="info@tianbot.es\n">
-                  info@tianbot.com
+                <a href="mailto:info@tianbot.es" className="text-muted-foreground hover:text-primary transition-colors">
+                  info@tianbot.es
                 </a>
               </li>
               <li className="flex items-start">
                 <Phone size={20} className="mr-2 mt-1 flex-shrink-0" />
-                <a href="tel:+34600000000" className="text-muted-foreground hover:text-primary transition-colors">
-                  +34 600 000 000
+                <a href="tel:977709450" className="text-muted-foreground hover:text-primary transition-colors">
+                  977 70 94 50
                 </a>
               </li>
               <li className="flex items-start">
@@ -90,7 +91,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-border mt-10 pt-6 text-center text-muted-foreground">
-          <p>&copy; {currentYear} Tianbot. Todos los derechos reservados.</p>
+          <p>&copy; {currentYear} TianBot. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>;

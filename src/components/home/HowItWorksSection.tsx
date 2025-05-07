@@ -7,7 +7,7 @@ const HowItWorksSection = () => {
     {
       icon: <Smartphone className="h-12 w-12 text-tianbot-blue" />,
       title: 'Aplicación interactiva',
-      description: 'Interfaz personalizada que se adapta a las necesidades específicas de cada usuario, con sistemas de comunicación alternativos basados en pictogramas, sonidos y animaciones.'
+      description: 'Interfaz personalizada que ayuda a clarificar situaciones, con sistemas de comunicación alternativos basados en pictogramas, sonidos y animaciones.'
     },
     {
       icon: <Monitor className="h-12 w-12 text-tianbot-green" />,
@@ -16,7 +16,7 @@ const HowItWorksSection = () => {
     },
     {
       icon: <Cloud className="h-12 w-12 text-tianbot-purple" />,
-      title: 'Inteligencia adaptativa',
+      title: 'Machine Learning',
       description: 'Sistema de aprendizaje que evoluciona con el usuario, recopilando datos sobre patrones de uso y preferencias para ofrecer una experiencia cada vez más personalizada.'
     },
     {
@@ -62,11 +62,11 @@ const HowItWorksSection = () => {
         <div className="mt-20 relative bg-card border border-border rounded-2xl p-8 overflow-hidden">
           <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-gradient-to-br from-tianbot-blue/30 to-tianbot-green/30 rounded-full blur-3xl"></div>
           <div className="relative">
-            <h3 className="text-2xl font-bold mb-6">¿Por qué Tianbot es diferente?</h3>
+            <h3 className="text-2xl font-bold mb-6">¿Por qué TianBot es diferente?</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="text-tianbot-green mr-2 font-bold">01.</span>
-                <p><strong>Enfoque personalizado:</strong> A diferencia de otras soluciones genéricas, Tianbot se adapta a las necesidades específicas de cada usuario.</p>
+                <p><strong>Enfoque personalizado:</strong> A diferencia de otras soluciones genéricas, TianBot se adapta a las necesidades específicas de cada usuario.</p>
               </li>
               <li className="flex items-start">
                 <span className="text-tianbot-green mr-2 font-bold">02.</span>

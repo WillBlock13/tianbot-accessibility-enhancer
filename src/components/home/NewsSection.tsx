@@ -5,7 +5,7 @@ import { Calendar, ArrowRight } from 'lucide-react';
 const NewsSection = () => {
   const newsItems = [
     {
-      title: 'Tianbot finalista en el Audi Creativity Challenge',
+      title: 'TianBot finalista en el Audi Creativity Challenge',
       date: '15 de junio de 2024',
       excerpt: 'Nuestro proyecto ha sido reconocido como uno de los finalistas en el prestigioso concurso de innovación Audi Creativity Challenge, destacando por su impacto social.',
       image: '/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
@@ -37,12 +37,12 @@ const NewsSection = () => {
     {
       title: 'Radio Amposta',
       date: '22 de julio de 2025',
-      location: 'Barcelona, España',
+      location: 'Amposta, España',
       url: '#event-2'
     },
     {
       title: 'DEMO Day ; AudiStart',
-      date: 'setiembre de 2025',
+      date: 'octubre de 2025',
       location: 'Madrid, España',
       url: '#event-3'
     }
@@ -119,6 +119,47 @@ const NewsSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        
+        {/* Nueva sección de Troubleshooting */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold mb-6">¿Detectaste un problema?</h3>
+          <div className="bg-card border border-border rounded-xl overflow-hidden p-6">
+            <p className="text-muted-foreground mb-6">
+              Ayúdanos a mejorar TianBot reportando cualquier problema que encuentres con la identificación de signos de autismo. 
+              Tu feedback es invaluable para mejorar nuestro sistema.
+            </p>
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="problem-description" className="block text-sm font-medium mb-1">
+                  Describe el problema
+                </label>
+                <textarea 
+                  id="problem-description" 
+                  className="w-full p-3 border border-border rounded-md"
+                  rows={4}
+                  placeholder="Describe el comportamiento o situación que TianBot no identificó correctamente..."
+                ></textarea>
+              </div>
+              <div>
+                <label htmlFor="user-email" className="block text-sm font-medium mb-1">
+                  Tu correo electrónico (opcional)
+                </label>
+                <input 
+                  type="email" 
+                  id="user-email" 
+                  className="w-full p-3 border border-border rounded-md"
+                  placeholder="Para recibir seguimiento a tu reporte..."
+                />
+              </div>
+              <button 
+                type="button" 
+                className="bg-tianbot-blue text-white px-6 py-2 rounded-md hover:bg-tianbot-blue/80 transition-colors"
+              >
+                Enviar reporte
+              </button>
+            </form>
           </div>
         </div>
       </div>

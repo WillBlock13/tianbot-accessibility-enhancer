@@ -48,20 +48,20 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-5 w-5 text-tianbot-blue" />,
       title: 'Correo electrónico',
-      value: 'info@tianbot.com',
-      href: 'mailto:info@tianbot.com'
+      value: 'info@tianbot.es',
+      href: 'mailto:info@tianbot.es'
     },
     {
       icon: <Phone className="h-5 w-5 text-tianbot-green" />,
       title: 'Teléfono',
-      value: '+34 600 000 000',
-      href: 'tel:+34600000000'
+      value: '977 70 94 50',
+      href: 'tel:977709450'
     },
     {
       icon: <MapPin className="h-5 w-5 text-tianbot-purple" />,
       title: 'Ubicación',
-      value: 'Barcelona, España',
-      href: 'https://maps.google.com/?q=Barcelona,España'
+      value: 'Amposta, España',
+      href: 'https://maps.google.com/?q=Amposta,España'
     }
   ];
 

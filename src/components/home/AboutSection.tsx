@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CheckCircle, Heart, Brain, Users } from 'lucide-react';
 
@@ -14,13 +15,13 @@ const AboutSection = () => {
       icon: <Brain className="h-6 w-6 text-tianbot-green" />
     },
     {
-      title: 'Adaptabilidad única',
+      title: 'Sistema personalizado',
       description: 'Se personaliza según las necesidades específicas de cada persona.',
       icon: <Heart className="h-6 w-6 text-tianbot-purple" />
     },
     {
-      title: 'Facilita la integración',
-      description: 'Proporciona herramientas para mejorar las interacciones sociales.',
+      title: 'Facilita la conexión',
+      description: 'Por medio de la aplicación, familias y cuidadores se pueden conectar.',
       icon: <Users className="h-6 w-6 text-tianbot-blue" />
     }
   ];
@@ -29,7 +30,7 @@ const AboutSection = () => {
     <section id="about" className="container-section bg-gradient-to-b from-background to-muted/30">
       <div className="max-w-4xl mx-auto">
         <h2 className="section-title text-transparent bg-clip-text bg-gradient-to-r from-tianbot-blue to-tianbot-green">
-          ¿Qué es Tianbot?
+          ¿Qué es TianBot?
         </h2>
         <p className="section-subtitle">
           Una solución tecnológica innovadora para personas con autismo
@@ -37,10 +38,10 @@ const AboutSection = () => {
 
         <div className="prose prose-lg max-w-none text-center mb-12">
           <p>
-            Tianbot es un proyecto que busca transformar la vida de las personas con autismo 
+            TianBot es un proyecto que busca transformar la vida de las personas con autismo 
             utilizando la tecnología como puente para mejorar la comunicación y facilitar 
             la integración social. A través de interfaces intuitivas y herramientas adaptativas, 
-            Tianbot ofrece soluciones personalizadas que responden a las necesidades específicas 
+            TianBot ofrece soluciones personalizadas que responden a las necesidades específicas 
             de cada individuo.
           </p>
         </div>
