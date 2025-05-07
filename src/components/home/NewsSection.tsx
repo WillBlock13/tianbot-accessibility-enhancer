@@ -5,25 +5,46 @@ import { Calendar, ArrowRight } from 'lucide-react';
 const NewsSection = () => {
   const newsItems = [
     {
-      title: 'TianBot finalista en el Audi Creativity Challenge',
-      date: '15 de junio de 2024',
-      excerpt: 'Nuestro proyecto ha sido reconocido como uno de los finalistas en el prestigioso concurso de innovación Audi Creativity Challenge, destacando por su impacto social.',
+      title: 'Participación al MWC y 4YFN 2025',
+      date: '7 de marzo de 2025',
+      excerpt: 'TianBot participa al Mobile World Congress y 4YFN, presentándose a startups y expertos en innovación, testando la propuesta #tianbot_acc y conectando con el ecosistema tecnológico catalán.',
       image: '/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
       url: '#news-1'
     },
     {
-      title: 'Participación en el programa de incubación AudiStart',
-      date: '28 de abril de 2025',
-      excerpt: 'Presentamos la versión 2.0 de nuestra aplicación, con mejoras significativas en la interfaz de usuario y nuevas funcionalidades adaptativas.',
+      title: 'Entrevista al equipo TianBot',
+      date: '26 de julio de 2024',
+      excerpt: 'Entrevista a miembros del proyecto TianBot desarrollado en FabLab TE, compartiendo experiencias y visión de futuro del proyecto.',
       image: '/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
       url: '#news-2'
     },
     {
-      title: 'Colaboración con el Centro de Investigación en Autismo',
-      date: '12 de marzo de 2023',
-      excerpt: 'Iniciamos una colaboración estratégica con el Centro de Investigación en Autismo para evaluar y mejorar continuamente nuestras herramientas.',
+      title: 'Premio al Catalunya Summit',
+      date: '27 de abril de 2024',
+      excerpt: 'TianBot recibe el 1r premio al Catalunya Summit en Vilafranca del Penedès, destacándose como una propuesta líder en innovación social liderada por el equipo Skills-Lab del FabLab TE.',
       image: '/lovable-uploads/IMG_1653.JPG',
       url: '#news-3'
+    },
+    {
+      title: 'Presentación pública en FabLab Amposta',
+      date: '7 de junio de 2024',
+      excerpt: 'El proyecto TianBot se presentó oficialmente en el FabLab de Amposta, con gran acogida por parte del público y ambición de llevarlo hasta Silicon Valley a través de concursos como el Audi Creativity Challenge.',
+      image: '/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
+      url: '#news-4'
+    },
+    {
+      title: 'Presentación en la Jornada "Parlem d\'Autisme"',
+      date: '19 de octubre de 2023',
+      excerpt: 'TianBot se presentó en la III Jornada "Parlem d\'Autisme" en La Ràpita ante profesionales de salud y educación, destacando como solución innovadora para mejorar la comunicación de personas con autismo.',
+      image: '/lovable-uploads/IMG_1653.JPG',
+      url: '#news-5'
+    },
+    {
+      title: 'TianBot finalista en el Audi Creativity Challenge',
+      date: '15 de junio de 2024',
+      excerpt: 'Nuestro proyecto ha sido reconocido como uno de los finalistas en el prestigioso concurso de innovación Audi Creativity Challenge, destacando por su impacto social.',
+      image: '/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
+      url: '#news-6'
     }
   ];
 
@@ -31,7 +52,7 @@ const NewsSection = () => {
     {
       title: 'Tecnología y Autismo',
       date: '15 de julio de 2025',
-      location: 'Online',
+      location: 'Amposta, España',
       url: '#event-1'
     },
     {
@@ -122,7 +143,7 @@ const NewsSection = () => {
           </div>
         </div>
         
-        {/* Nueva sección de Troubleshooting */}
+        {/* Sección de Troubleshooting */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold mb-6">¿Detectaste un problema?</h3>
           <div className="bg-card border border-border rounded-xl overflow-hidden p-6">
