@@ -5,38 +5,38 @@ import { Calendar, ArrowRight } from 'lucide-react';
 const NewsSection = () => {
   const newsItems = [
     {
-      title: 'Participación al MWC y 4YFN 2025',
+      title: 'Visita y Networking al MWC',
       date: '7 de marzo de 2025',
-      excerpt: 'TianBot participa al Mobile World Congress y 4YFN, presentándose a startups y expertos en innovación, testando la propuesta #tianbot_acc y conectando con el ecosistema tecnológico catalán.',
-      image: '/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
+      excerpt: 'TianBot visita al Mobile World Congress, presentándose a startups y expertos en innovación, testando la propuesta #tianbot_acc y conectando con el ecosistema tecnológico.',
+      image: 'lovable-uploads/mwc.jpeg',
       url: '#news-1'
     },
     {
       title: 'Entrevista al equipo TianBot',
       date: '26 de julio de 2024',
-      excerpt: 'Entrevista a miembros del proyecto TianBot desarrollado en FabLab TE, compartiendo experiencias y visión de futuro del proyecto.',
-      image: '/lovable-uploads/504472dd-43a8-431d-b09f-2ade5b109e5d.png',
+      excerpt: 'Entrevista de la Plana Radio compartiendo experiencias y visión de futuro del proyecto.',
+      image: '/lovable-uploads/lapalana.jpg',
       url: '#news-2'
     },
     {
       title: 'Premio al Catalunya Summit',
       date: '27 de abril de 2024',
       excerpt: 'TianBot recibe el 1r premio al Catalunya Summit en Vilafranca del Penedès, destacándose como una propuesta líder en innovación social liderada por el equipo Skills-Lab del FabLab TE.',
-      image: '/lovable-uploads/IMG_1653.JPG',
+      image: '/lovable-uploads/summit.jpg',
       url: '#news-3'
     },
     {
       title: 'Presentación pública en FabLab Amposta',
       date: '7 de junio de 2024',
       excerpt: 'El proyecto TianBot se presentó oficialmente en el FabLab de Amposta, con gran acogida por parte del público y ambición de llevarlo hasta Silicon Valley a través de concursos como el Audi Creativity Challenge.',
-      image: '/lovable-uploads/YDRAY-FOTOS-AUDI-CREATIVITY-CHALLENGE-DIA-02-WEB-501.jpg',
+      image: '/lovable-uploads/quedada.jpg',
       url: '#news-4'
     },
     {
       title: 'Presentación en la Jornada "Parlem d\'Autisme"',
       date: '19 de octubre de 2023',
       excerpt: 'TianBot se presentó en la III Jornada "Parlem d\'Autisme" en La Ràpita ante profesionales de salud y educación, destacando como solución innovadora para mejorar la comunicación de personas con autismo.',
-      image: '/lovable-uploads/IMG_1653.JPG',
+      image: '/lovable-uploads/rapita.jpeg',
       url: '#news-5'
     },
     {
@@ -56,14 +56,14 @@ const NewsSection = () => {
       url: '#event-1'
     },
     {
-      title: 'Radio Amposta',
-      date: '22 de julio de 2025',
+      title: 'MVP',
+      date: 'julio de 2025',
       location: 'Amposta, España',
       url: '#event-2'
     },
     {
       title: 'DEMO Day ; AudiStart',
-      date: 'octubre de 2025',
+      date: 'Octubre de 2025',
       location: 'Madrid, España',
       url: '#event-3'
     }
