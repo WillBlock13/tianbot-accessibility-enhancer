@@ -15,11 +15,11 @@ const NewsSection = () => {
       title: 'Entrevista al equipo TianBot',
       date: '26 de julio de 2024',
       excerpt: 'Entrevista de la Plana Radio compartiendo experiencias y visión de futuro del proyecto.',
-      image: '/lovable-uploads/lapalana.jpg',
+      image: '/lovable-uploads/1.jpg',
       url: '#news-2'
     },
     {
-      title: 'Premio al Catalunya Summit',
+      title: '1r Premio al Catalunya Summit',
       date: '27 de abril de 2024',
       excerpt: 'TianBot recibe el 1r premio al Catalunya Summit en Vilafranca del Penedès, destacándose como una propuesta líder en innovación social liderada por el equipo Skills-Lab del FabLab TE.',
       image: '/lovable-uploads/summit.jpg',
