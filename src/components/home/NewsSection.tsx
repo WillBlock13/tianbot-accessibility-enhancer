@@ -15,7 +15,7 @@ const NewsSection = () => {
       title: 'Entrevista al equipo TianBot',
       date: '26 de julio de 2024',
       excerpt: 'Entrevista de la Plana Radio compartiendo experiencias y visión de futuro del proyecto.',
-      image: '/lovable-uploads/rapita.jpeg',
+      image: '/lovable-uploads/1.jpeg',
       url: '#news-2'
     },
     {
